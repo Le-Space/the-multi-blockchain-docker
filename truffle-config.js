@@ -23,9 +23,7 @@ module.exports = {
     // networkCheckTimeout: 1e9,
   //   gas: 4612388 // Gas limit used for deploys
     },
-
-    //RSK
-    rsk: {
+    rsk: {     //RSK
       host: "127.0.0.1",
       port: 4444,
       network_id: "*"
@@ -36,9 +34,7 @@ module.exports = {
       gasPrice: Math.floor(gasPriceTestnet * 1.1),
       networkCheckTimeout: 1e9
     },
-
-    //Ethereum Rinkeby
-    rinkeby: {
+    rinkeby: {     //Ethereum Rinkeby
       host: "127.0.0.1", // Connect to geth on the specified
       port: 8545,
       from: "", // default address to use for any transaction Truffle makes during migrations

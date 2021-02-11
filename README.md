@@ -14,9 +14,18 @@
 3. ```cd``` to one of the blockchains folder and run 
 ```docker-compose up -d``` to start the node
 
-4. Back in the root folder, deploy the smart contracts using:
+4. Back in the root folder, deploy the smart contract to each blockchain using:
 
 ```
-truffle migrate --network development
+truffle migrate --network ethermint #for ethermint
+truffle migrate --network rsk #for rsk
+truffle migrate --network moonbeam #for moonbeam (polkadot)
 ```
 Make sure to enable the correct configuration in ```truffle-config.js```
+
+
+5. Documentations
+- MoonBeam 
+    - Interacting with Moonbeam using Truffle https://docs.moonbeam.network/getting-started/local-node/using-truffle/
+
+
