@@ -1,4 +1,4 @@
-var HDWalletProvider = require('@truffle/hdwallet-provider')
+  var HDWalletProvider = require('@truffle/hdwallet-provider')
 
 var mnemonic = 'your mnemonic'
 var publicTestnetNode = 'https://public-node.testnet.rsk.co/'
@@ -14,16 +14,18 @@ console.log("Gas price Testnet: " + gasPriceTestnet);
 module.exports = {
   networks: {
 
-    //DEFAULT
-    development: {
+    ethermint: {
      skipDryRun: true,
      host: "127.0.0.1",     // Localhost (default: none)
      port: 8545,            // Standard Ethereum port (default: none)
-     network_id: "*",       // Any network (default: none)
+     network_id: "1",       // Any network (default: none)
+     gasPrice: Math.floor(gasPriceTestnet * 1.1),
+    // networkCheckTimeout: 1e9,
+  //   gas: 4612388 // Gas limit used for deploys
     },
 
     //RSK
-    development: {
+    rsk: {
       host: "127.0.0.1",
       port: 4444,
       network_id: "*"
